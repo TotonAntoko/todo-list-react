@@ -10,9 +10,9 @@ const EditTaskPopup = ({
   const [description, setDescription] = useState('');
 
   const handleChange = (e) => {
-    const { title, value } = e.target;
+    const { name, value } = e.target;
 
-    if (title === 'taskName') {
+    if (name === 'taskName') {
       setTaskTitle(value);
     } else {
       setDescription(value);
@@ -39,7 +39,7 @@ const EditTaskPopup = ({
 
         <div className="form-group">
           <label>Task Name</label>
-          <input type="text" className="form-control" value={taskTitle} onChange={handleChange} name="taskName" />
+          <input type="text" className="form-control" value={taskTitle} onChange={handleChange} name="taskTitle" />
         </div>
         <div className="form-group">
           <label>Description</label>
